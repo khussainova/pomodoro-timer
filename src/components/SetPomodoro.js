@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { SettingsContext } from "../context/SettingsContext";
-import Button from "./Button";
 
 const SetPomodoro = () => {
   const [newTimer, setNewTimer] = useState({
@@ -69,7 +68,7 @@ const SetPomodoro = () => {
             value={newTimer.long}
           />
         </div>
-        <Button type="submit">Set Timer</Button>
+        <button type="submit">Set Timer</button>
       </form>
     </div>
   );
