@@ -13,6 +13,7 @@ function SettingsContextProvider(props) {
       active: activate_state,
     });
     setTimerTime(executing);
+  }
 
     function startTimer() {
       setStartAnimate(true);
@@ -22,9 +23,7 @@ function SettingsContextProvider(props) {
       setStartAnimate(false);
     }
 
-    function stopTimer() {
-      setStartAnimate(false);
-    }
+  
 
     const children = ({ remainingTime }) => {
       const minutes = Math.floor(remainingTime / 60);
@@ -42,14 +41,6 @@ function SettingsContextProvider(props) {
       setExecuting(updatedSettings);
       setTimerTime(updatedSettings);
     };
-
-    function setCurrentTimer(active_state) {
-      updateExecute({
-        ...executing,
-        active: active_state,
-      });
-      setTimerTime(executing);
-    }
 
     const setTimerTime = (evaluate) => {
       switch (evaluate.active) {
@@ -94,6 +85,5 @@ function SettingsContextProvider(props) {
       </SettingsContext.Provider>
     );
   }
-}
 
 export default SettingsContextProvider;
