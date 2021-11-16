@@ -27,29 +27,3 @@ const CoundownAnimation = ({ key, timer, animate, children }) => {
 };
 
 export default CoundownAnimation;
-
-/*const CountdownAnimation = ({
-  key = 1,
-  timer = 20,
-  animate = true,
-  children,
-}) => {
-  const { stopTimer } = useContext(SettingsContext);
-  return (
-    <CountdownCircleTimer
-      key={key}
-      isPlaying={animate}
-      duration={timer * 60}
-      colors={[["#fe6f6b", 0.33][("#fe6f6b", 0.33)][("#fe6f6b", 0.33)]]}
-      strokeWidth={6}
-      size={220}
-      trailColor="#151932"
-      onComplete={() => {
-        stopTimer();
-      }}
-    >
-      {children}
-    </CountdownCircleTimer>
-  );
-};
-export default CountdownAnimation;*/
